@@ -1,7 +1,14 @@
-import React, { VFC } from 'react';
+import React, { memo, VFC } from 'react';
+import { ChakraProvider } from '@chakra-ui/react';
 
-const Home: VFC = () => {
-  return <div>Hello TypeScript</div>;
-};
+import theme from '../components/theme/theme';
 
-export default Home;
+const Login: VFC = memo(() => {
+  return (
+    <ChakraProvider theme={theme}>
+      <p>Loginページです</p>
+    </ChakraProvider>
+  );
+});
+
+export default Login;
