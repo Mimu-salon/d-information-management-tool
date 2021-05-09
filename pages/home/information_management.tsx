@@ -7,7 +7,7 @@ import { Layout } from '../../components/atomic/template/Layout';
 const InformationManagement: VFC = memo(() => {
   return (
     <ChakraProvider theme={theme}>
-      <Layout title='医師一覧 | 医師情報管理ツール'>
+      <Layout title='登録一覧 | 医師情報管理ツール'>
         <p>InformationManagementページです</p>
       </Layout>
     </ChakraProvider>
