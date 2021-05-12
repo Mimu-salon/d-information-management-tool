@@ -1,20 +1,15 @@
-import { Image } from '@chakra-ui/image';
-import { Box, Stack, Wrap, WrapItem } from '@chakra-ui/layout';
 import { memo, VFC } from 'react';
+import { Wrap, WrapItem } from '@chakra-ui/layout';
 
 import { Layout } from '../../components/atomic/template/Layout';
+import { DoctorCard } from '../../components/atomic/organisms/infomation_management/DoctorCard';
 
 const InformationManagement: VFC = memo(() => {
   return (
     <Layout title='登録一覧 | 医師情報管理ツール'>
-      <Wrap>
+      <Wrap p={{ base: 4, md: 10 }}>
         <WrapItem>
-          <Box w="260px" h="260px" bg="white" borderRadius="10px" shadow="md">
-            <Stack textAlign="center">
-              <Image borderRadius="full" boxSize="160px" src="https://source.unsplash.com/random" alt="プロフィール画像" />
-
-            </Stack>
-          </Box>
+          <DoctorCard imageUrl="https://source.unsplash.com/random" doctorName="●● ●●" hospital="●●●●●●病院" department="●●内科"/>
         </WrapItem>
       </Wrap>
     </Layout>
