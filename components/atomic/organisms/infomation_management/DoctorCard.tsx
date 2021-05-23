@@ -7,10 +7,11 @@ type Props = {
   doctorName: string;
   hospital: string;
   department: string;
+  onClick: () => void;
 };
 
 export const DoctorCard: VFC<Props> = memo((props) => {
-  const { imageUrl, doctorName, hospital, department } = props;
+  const { imageUrl, doctorName, hospital, department, onClick } = props;
   return (
     <Box
       w='260px'
@@ -19,7 +20,9 @@ export const DoctorCard: VFC<Props> = memo((props) => {
       borderRadius='10px'
       shadow='md'
       p={4}
-      _hover={{ cursor: 'pointer', opacity: 0.8 }}>
+      _hover={{ cursor: 'pointer', opacity: 0.8 }} 
+      onClick={onClick}>
+      
       <Stack textAlign='center'>
         <Image borderRadius='full' boxSize='160px' src={imageUrl} alt={doctorName} m='auto' />
         <Text fontSize='lg' fontWeight='bold'>
